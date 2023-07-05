@@ -1,2 +1,8 @@
-# termux
-termux command on android pad
+# commands
+
+```bash
+
+apt update && apt upgrade
+apt install wget git
+
+```
