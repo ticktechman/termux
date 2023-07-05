@@ -3,6 +3,6 @@
 ```bash
 
 apt update && apt upgrade
-apt install wget git
+apt install -y wget git
 
 ```
