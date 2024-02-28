@@ -15,3 +15,5 @@ BOOTDIR="$HOME/.termux/boot"
   for one in $(ls -1 $BOOTDIR); do
     source $BOOTDIR/$one
   done
+
+termux-wake-lock

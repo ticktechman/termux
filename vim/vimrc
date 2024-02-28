@@ -1,0 +1,8 @@
+set shiftwidth=2
+set tabstop=2
+set smarttab
+set expandtab
+set mouse=
+
+colorscheme molokai
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
