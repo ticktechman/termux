@@ -1,8 +1,13 @@
 ## alias
+unalias ls
 alias ls='ls -F'
 alias ll='ls -l'
 alias la='ls -A'
 alias cls=clear
+
+GIT_COMPLETION="$HOME/../usr/etc/bash_completion.d/git-completion.bash"
+[ -f $GIT_COMPLETION ] &&
+  source $GIT_COMPLETION
 
 ## source all services
 BOOTDIR="$HOME/.termux/boot"

@@ -8,10 +8,32 @@
 ##
 ###############################################################################
 
-apt update
-termux-change-repo
-apt upgrade
+function bootstrap() {
+  apt update &&
+  termux-change-repo &&
+  apt upgrade &&
+}
 
-apt install -y vim openssh
+function install.basic() {
+  echo "=> install basic" &&
+    cp bashrc $HOME/.bashrc &&
+    cp vimrc $HOME/.vimrc &&
+    mkdir -p ~/.termux/boot &&
+    apt install -y vim &&
+    echo "=> succ" || echo "=> fail"
+}
+
+function install.sshd() {
+  echo "=> install sshd" &&
+    apt install -y openssh &&
+    cp ./server/ssh/sshd.sh $HOME/.termux/boot/sshd.sh &&
+  echo "=> succ" || echo "=> fail"
+}
+
+function install.git() {
+  echo "=> install git" &&
+    apt install -y git &&
+  echo "=> succ" || echo "=> fail"
+}
 
 ###############################################################################
