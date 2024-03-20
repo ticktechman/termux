@@ -1,8 +1,7 @@
 ## alias
-unalias ls
 alias ls='ls -F'
 alias ll='ls -l'
-alias la='ls -A'
+alias la='ls -lA'
 alias cls=clear
 
 GIT_COMPLETION="$HOME/../usr/etc/bash_completion.d/git-completion.bash"

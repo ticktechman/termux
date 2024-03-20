@@ -17,7 +17,8 @@ function bootstrap() {
 function install.basic() {
   echo "=> install basic" &&
     cp bashrc $HOME/.bashrc &&
-    cp vimrc $HOME/.vimrc &&
+    cp vim/vimrc $HOME/.vimrc &&
+    mkdir -p $HOME/.vim/ && cp -a vim/colors $HOME/.vim/ &&
     mkdir -p ~/.termux/boot &&
     apt install -y vim &&
     echo "=> succ" || echo "=> fail"
