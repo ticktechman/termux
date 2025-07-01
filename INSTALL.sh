@@ -11,7 +11,7 @@
 function bootstrap() {
   apt update &&
   termux-change-repo &&
-  apt upgrade &&
+  apt upgrade
 }
 
 function install.basic() {
